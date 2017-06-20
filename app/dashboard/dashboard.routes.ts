@@ -1,5 +1,4 @@
 import { Route } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
 import { PopularFilmComponent } from './popular/popular-film.component';
 import { FilmDetailsComponent } from './details/film-details.component';
 import { FavoriteFilmsComponent } from './favorite/favorite-films.component';
