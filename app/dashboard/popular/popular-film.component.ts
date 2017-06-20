@@ -1,7 +1,4 @@
-import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
-import initDemo = require('../../../assets/js/charts.js');
-
-declare var $:any;
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'popular-film',
@@ -11,12 +8,6 @@ declare var $:any;
 
 export class PopularFilmComponent implements OnInit{
     ngOnInit(){
-        // $('[data-toggle="checkbox"]').each(function () {
-        //     if($(this).data('toggle') == 'switch') return;
-        //
-        //     var $checkbox = $(this);
-        //     $checkbox.checkbox();
-        // });
-        initDemo();
+
     }
 }

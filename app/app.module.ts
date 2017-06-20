@@ -22,7 +22,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         FooterModule,
         RouterModule.forRoot([])
     ],
-    declarations: [ AppComponent, DashboardComponent ],
+    declarations: [
+        AppComponent,
+        DashboardComponent,
+    ],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap:    [ AppComponent ]
 })
