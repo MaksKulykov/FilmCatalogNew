@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'user-cmp',
+    selector: 'film-details',
     moduleId: module.id,
     templateUrl: 'film-details.component.html'
 })
