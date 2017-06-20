@@ -1,0 +1,16 @@
+<div class="col-md-4" *ngFor="let film of filmPopularList">
+    <div class="card card-profile">
+        <div class="card-avatar">
+            <a href="#pablo">
+                <img class="img" src="https://image.tmdb.org/t/p/w500{{film.poster_path}}" />
+            </a>
+        </div>
+
+        <div class="content">
+            <h6 class="category text-gray">Popularity {{film.popularity}}</h6>
+            <h4 class="card-title">{{film.title}}</h4>
+            <p class="card-content">{{film.overview.slice(0,250) + '...'}}</p>
+            <a href="#pablo" class="btn btn-danger btn-round">More</a>
+        </div>
+    </div>
+</div>

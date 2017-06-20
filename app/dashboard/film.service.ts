@@ -26,4 +26,5 @@ export class FilmService {
         return this.http.get(this.url, {search: params}).map(this.extractListData)
             .catch((error: any)=> { return Observable.throw(error);});
     }
+
 }

@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MODULE_COMPONENTS, MODULE_ROUTES } from './dashboard.routes';
@@ -8,6 +9,7 @@ import { FilmService } from './film.service'
 
 @NgModule({
     imports: [
+        BrowserModule,
         HttpModule,
         RouterModule.forChild(MODULE_ROUTES)
     ],

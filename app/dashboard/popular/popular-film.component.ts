@@ -8,11 +8,13 @@ import { FilmService } from '../film.service';
 })
 
 export class PopularFilmComponent implements OnInit{
-    filmList: any[] = [];
+    filmPopularList: any[] = [];
+    isLoaded: boolean;
 
     constructor(private popularFilmService: FilmService) { }
 
     ngOnInit(){
+        this.isLoaded = false;
         this.getPopularFilms();
     }
 
@@ -22,12 +24,13 @@ export class PopularFilmComponent implements OnInit{
                 (films: any[]) => {
                     if (films && films.length) {
                         console.log(films);
-                        this.filmList = films;
+                        this.filmPopularList = films;
                     }
                 },
                 (error: any) => {
                     console.log(error);
                 }
             );
+        this.isLoaded = true;
     }
 }
