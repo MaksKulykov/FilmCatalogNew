@@ -8,7 +8,7 @@ import { FilmService } from '../film.service';
 @Component({
     selector: 'film-details',
     moduleId: module.id,
-    templateUrl: 'film-details.component.html'
+    templateUrl: 'details-film.component.html'
 })
 
 export class FilmDetailsComponent implements OnInit{
