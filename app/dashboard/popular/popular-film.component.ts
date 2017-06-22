@@ -11,7 +11,7 @@ export class PopularFilmComponent implements OnInit{
     filmPopularList: any[] = [];
     isLoaded: boolean;
 
-    constructor(private popularFilmService: FilmService) { }
+    constructor(private filmService: FilmService) { }
 
     ngOnInit(){
         this.isLoaded = false;
@@ -19,7 +19,7 @@ export class PopularFilmComponent implements OnInit{
     }
 
     private getPopularFilms(): void {
-        this.popularFilmService.getPopularFilms()
+        this.filmService.getPopularFilms()
             .subscribe(
                 (films: any[]) => {
                     if (films && films.length) {

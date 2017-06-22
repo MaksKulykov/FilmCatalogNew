@@ -2,7 +2,7 @@
  * Created by User on 20.06.2017.
  */
 import { Component, Input, OnInit } from '@angular/core';
-import { FilmService } from '../film.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'popular-film-card',
@@ -14,8 +14,12 @@ export class PopularFilmCardComponent implements OnInit {
     @Input()
     filmPopularList: any[];
 
-    constructor(private popularFilmCardService: FilmService) { }
+    constructor(private router: Router) { }
 
     ngOnInit() { }
+
+    gotoDetail(id: string): void {
+        this.router.navigate(['/details', id]);
+    }
 
 }
