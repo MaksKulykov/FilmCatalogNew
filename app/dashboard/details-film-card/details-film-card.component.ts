@@ -2,6 +2,7 @@
  * Created by User on 22.06.2017.
  */
 import { Component, Input, OnInit } from '@angular/core';
+import {element} from "@angular/upgrade/src/angular_js";
 
 @Component({
     selector: 'details-film-card',
@@ -16,5 +17,14 @@ export class DetailsFilmCardComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
+
+    getElements(data: Array<any>): string {
+        let list: string = '';
+        data.forEach(element => {
+            list += element.name + ', ';
+        });
+        return list.slice(0, -2);
+
+    }
 
 }

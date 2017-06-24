@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
 import { FilmService } from '../film.service';
@@ -17,7 +16,6 @@ export class FilmDetailsComponent implements OnInit{
     constructor(
         private filmService: FilmService,
         private route: ActivatedRoute,
-        private location: Location
     ) {}
 
     ngOnInit(){

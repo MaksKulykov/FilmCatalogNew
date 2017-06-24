@@ -1,3 +1,22 @@
 <div class="card-content">
-
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card-avatar">
+                <img class="img" src="https://image.tmdb.org/t/p/w500{{filmDetails.poster_path}}" />
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="content">
+                <ul class="info">
+                    <li><span>Release: </span>{{filmDetails.release_date}}</li>
+                    <li><span>Runtime: </span>{{filmDetails.runtime}} min</li>
+                    <li><span>Production Countries: </span>{{getElements(filmDetails.production_countries)}}</li>
+                    <li><span>Genres: </span>{{getElements(filmDetails.genres)}}</li>
+                    <li><span>Production Companies: </span>{{getElements(filmDetails.production_companies)}}</li>
+                    <li><span>Budget: </span>{{filmDetails.budget.toString().slice(0, -6)}} million USD</li>
+                    <li><span>Overview :</span>{{filmDetails.overview}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
