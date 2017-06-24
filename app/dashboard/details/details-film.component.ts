@@ -44,7 +44,7 @@ export class FilmDetailsComponent implements OnInit{
             .subscribe(
                 (actors: any) => {
                     console.log(actors);
-                    this.actors = actors;
+                    this.actors = actors.slice(0, 6);
                 },
                 (error: any) => {
                     console.log(error);

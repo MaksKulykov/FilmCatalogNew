@@ -8,3 +8,9 @@ li {
     font-size: large;
     margin-bottom: 20px;
 }
+.content {
+    height: 100px;
+}
+.img_actor {
+    height: 250px;
+}

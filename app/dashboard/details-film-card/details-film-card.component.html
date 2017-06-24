@@ -19,4 +19,17 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-2" *ngFor="let actor of actors">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <img class="img_actor" src="https://image.tmdb.org/t/p/w92{{actor.profile_path}}" />
+                </div>
+                <div class="content">
+                    <h6 class="category text-gray">{{actor.name}}</h6>
+                    <h4 class="card-title">{{actor.character}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

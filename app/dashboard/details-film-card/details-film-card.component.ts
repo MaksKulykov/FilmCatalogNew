@@ -13,6 +13,8 @@ import {element} from "@angular/upgrade/src/angular_js";
 export class DetailsFilmCardComponent implements OnInit {
     @Input()
     filmDetails: any;
+    @Input()
+    actors: Array<any>;
 
     constructor() { }
 
