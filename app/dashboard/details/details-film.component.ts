@@ -12,6 +12,7 @@ import { FilmService } from '../film.service';
 
 export class FilmDetailsComponent implements OnInit{
     filmDetails: any[] = [];
+    actors: any[] = [];
 
     constructor(
         private filmService: FilmService,
@@ -20,6 +21,7 @@ export class FilmDetailsComponent implements OnInit{
 
     ngOnInit(){
         this.getFilmDetails();
+        this.getActors();
     }
 
     getFilmDetails(): void {
@@ -29,6 +31,20 @@ export class FilmDetailsComponent implements OnInit{
                 (filmDetails: any) => {
                     console.log(filmDetails);
                     this.filmDetails = filmDetails;
+                },
+                (error: any) => {
+                    console.log(error);
+                }
+            );
+    }
+
+    getActors(): void {
+        this.route.params
+            .switchMap((params: Params) => this.filmService.getActors(params['id']))
+            .subscribe(
+                (actors: any) => {
+                    console.log(actors);
+                    this.actors = actors;
                 },
                 (error: any) => {
                     console.log(error);

@@ -24,6 +24,11 @@ export class FilmService {
         return body || {};
     }
 
+    private extractListActors(res: Response): Array<any> {
+        let body = res.json();
+        return body.cast || {};
+    }
+
     getPopularFilms(): Observable<any> {
         let params: URLSearchParams = new URLSearchParams();
         params.set('api_key', this.apiKey);
@@ -38,6 +43,13 @@ export class FilmService {
         params.set('api_key', this.apiKey);
         params.set('language', this.language);
         return this.http.get(this.url + id, {search: params}).map(this.extractDetailsData)
+            .catch((error: any)=> { return Observable.throw(error);});
+    }
+
+    getActors(id: string): Observable<any> {
+        let params: URLSearchParams = new URLSearchParams();
+        params.set('api_key', this.apiKey);
+        return this.http.get(this.url + id + '/credits', {search: params}).map(this.extractListActors)
             .catch((error: any)=> { return Observable.throw(error);});
     }
 
