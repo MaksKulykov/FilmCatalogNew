@@ -23,7 +23,6 @@ export class PopularFilmComponent implements OnInit{
             .subscribe(
                 (films: any[]) => {
                     if (films && films.length) {
-                        console.log(films);
                         this.filmPopularList = films;
                     }
                 },

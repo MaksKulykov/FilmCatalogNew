@@ -1,8 +1,4 @@
-/**
- * Created by User on 22.06.2017.
- */
-import { Component, Input, OnInit } from '@angular/core';
-import {element} from "@angular/upgrade/src/angular_js";
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'details-film-card',
@@ -10,7 +6,8 @@ import {element} from "@angular/upgrade/src/angular_js";
     templateUrl: 'details-film-card.component.html',
     styleUrls: ['details-film-card.component.css']
 })
-export class DetailsFilmCardComponent implements OnInit {
+
+export class DetailsFilmCardComponent {
     @Input()
     filmDetails: any;
     @Input()
@@ -18,15 +15,12 @@ export class DetailsFilmCardComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit() { }
-
     getElements(data: Array<any>): string {
         let list: string = '';
         data.forEach(element => {
             list += element.name + ', ';
         });
         return list.slice(0, -2);
-
     }
 
 }

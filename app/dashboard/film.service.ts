@@ -20,7 +20,6 @@ export class FilmService {
 
     private extractDetailsData(res: Response): any {
         let body = res.json();
-        console.log(body);
         return body || {};
     }
 

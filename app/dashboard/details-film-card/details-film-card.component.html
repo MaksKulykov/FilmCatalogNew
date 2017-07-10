@@ -14,11 +14,12 @@
                     <li><span>Genres: </span>{{getElements(filmDetails.genres)}}</li>
                     <li><span>Production Companies: </span>{{getElements(filmDetails.production_companies)}}</li>
                     <li><span>Budget: </span>{{filmDetails.budget.toString().slice(0, -6)}} million USD</li>
-                    <li><span>Overview :</span>{{filmDetails.overview}}</li>
+                    <li><span>Overview: </span>{{filmDetails.overview}}</li>
                 </ul>
             </div>
         </div>
     </div>
+    <p>Actors:</p>
     <div class="row">
         <div class="col-md-2" *ngFor="let actor of actors">
             <div class="card card-profile">

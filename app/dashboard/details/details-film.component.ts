@@ -29,7 +29,6 @@ export class FilmDetailsComponent implements OnInit{
             .switchMap((params: Params) => this.filmService.getFilmDetails(params['id']))
             .subscribe(
                 (filmDetails: any) => {
-                    console.log(filmDetails);
                     this.filmDetails = filmDetails;
                 },
                 (error: any) => {
@@ -43,7 +42,6 @@ export class FilmDetailsComponent implements OnInit{
             .switchMap((params: Params) => this.filmService.getActors(params['id']))
             .subscribe(
                 (actors: any) => {
-                    console.log(actors);
                     this.actors = actors.slice(0, 6);
                 },
                 (error: any) => {
