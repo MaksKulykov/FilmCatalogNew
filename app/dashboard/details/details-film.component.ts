@@ -30,7 +30,7 @@ export class FilmDetailsComponent implements OnInit{
         this.route.params
             .switchMap((params: Params) => this.filmService.getFilmDetails(params['id']))
             .subscribe(
-                (filmDetails: any) => {
+                (filmDetails: FilmDetails) => {
                     this.filmDetails = filmDetails;
                 },
                 (error: any) => {
@@ -43,7 +43,7 @@ export class FilmDetailsComponent implements OnInit{
         this.route.params
             .switchMap((params: Params) => this.filmService.getActors(params['id']))
             .subscribe(
-                (actors: any) => {
+                (actors: Actors[]) => {
                     this.actors = actors.slice(0, 6);
                 },
                 (error: any) => {

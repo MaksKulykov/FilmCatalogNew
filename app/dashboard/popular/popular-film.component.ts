@@ -22,7 +22,7 @@ export class PopularFilmComponent implements OnInit{
     private getPopularFilms(): void {
         this.filmService.getPopularFilms()
             .subscribe(
-                (films: any[]) => {
+                (films: PopularFilms[]) => {
                     if (films && films.length) {
                         this.filmPopularList = films;
                     }
