@@ -13,7 +13,7 @@
                     <li><span>Production Countries: </span>{{filmDetails.production_countries | extractElements}}</li>
                     <li><span>Genres: </span>{{filmDetails.genres | extractElements}}</li>
                     <li><span>Production Companies: </span>{{filmDetails.production_companies | extractElements}}</li>
-                    <li><span>Budget: </span>{{filmDetails.budget.toString().slice(0, -6)}} million USD</li>
+                    <li><span>Budget: </span>{{filmDetails.budget | convertBudget}} million USD</li>
                     <li><span>Overview: </span>{{filmDetails.overview}}</li>
                 </ul>
             </div>

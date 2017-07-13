@@ -9,7 +9,8 @@ import { PopularFilmCardComponent } from './popular-film-card/popular-film-card.
 import { DetailsFilmCardComponent } from './details-film-card/details-film-card.component';
 import { FilmService } from './film.service';
 import { FormatString } from './pipes/format-string.pipe';
-import { ExtractElements } from './pipes/extract-elements.pipe'
+import { ExtractElements } from './pipes/extract-elements.pipe';
+import { ConvertBudget } from './pipes/convert-budget.pipe'
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { ExtractElements } from './pipes/extract-elements.pipe'
         PopularFilmCardComponent,
         DetailsFilmCardComponent,
         FormatString,
-        ExtractElements
+        ExtractElements,
+        ConvertBudget
     ],
     providers: [FilmService]
 })
