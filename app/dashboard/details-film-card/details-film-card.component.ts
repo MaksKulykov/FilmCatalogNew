@@ -16,14 +16,4 @@ export class DetailsFilmCardComponent {
     @Input()
     actors: Actors[];
 
-    constructor() { }
-
-    extractElements(data: any[]): string {
-        let list: string = '';
-        data.forEach(element => {
-            list += element.name + ', ';
-        });
-        return list.slice(0, -2);
-    }
-
 }
