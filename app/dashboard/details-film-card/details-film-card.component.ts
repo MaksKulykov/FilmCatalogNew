@@ -18,7 +18,7 @@ export class DetailsFilmCardComponent {
 
     constructor() { }
 
-    getElements(data: Array<any>): string {
+    extractElements(data: Array<any>): string {
         let list: string = '';
         data.forEach(element => {
             list += element.name + ', ';

@@ -7,7 +7,7 @@
         <div class="content">
             <h6 class="category text-gray">Popularity {{film.popularity}}</h6>
             <h4 class="card-title">{{film.title}}</h4>
-            <p class="card-content">{{film.overview.slice(0,250) + '...'}}</p>
+            <p class="card-content">{{film.overview | formatString}}</p>
             <button class="btn btn-danger btn-round" (click)="gotoDetail(film.id)">More</button>
         </div>
     </div>

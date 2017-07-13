@@ -7,7 +7,8 @@ import { HttpModule } from '@angular/http';
 
 import { PopularFilmCardComponent } from './popular-film-card/popular-film-card.component';
 import { DetailsFilmCardComponent } from './details-film-card/details-film-card.component';
-import { FilmService } from './film.service'
+import { FilmService } from './film.service';
+import { FormatString } from './pipes/format-string.pipe'
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import { FilmService } from './film.service'
     declarations: [
         MODULE_COMPONENTS,
         PopularFilmCardComponent,
-        DetailsFilmCardComponent
+        DetailsFilmCardComponent,
+        FormatString
     ],
     providers: [FilmService]
 })
