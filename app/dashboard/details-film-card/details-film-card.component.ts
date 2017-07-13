@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+import { FilmDetails } from '../models/filmDetails';
+import { Actors } from  '../models/actors';
+
 @Component({
     selector: 'details-film-card',
     moduleId: module.id,
@@ -9,9 +12,9 @@ import { Component, Input } from '@angular/core';
 
 export class DetailsFilmCardComponent {
     @Input()
-    filmDetails: any;
+    filmDetails: FilmDetails;
     @Input()
-    actors: Array<any>;
+    actors: Actors[];
 
     constructor() { }
 

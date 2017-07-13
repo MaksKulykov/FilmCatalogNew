@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { PopularFilms } from '../models/popularFilms';
+
 @Component({
     selector: 'popular-film-card',
     moduleId: module.id,
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class PopularFilmCardComponent implements OnInit {
     @Input()
-    filmPopularList: any[];
+    filmPopularList: PopularFilms[];
 
     constructor(private router: Router) { }
 

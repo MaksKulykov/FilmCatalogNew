@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmService } from '../film.service';
+import { PopularFilms } from '../models/popularFilms';
 
 @Component({
     selector: 'popular-film',
@@ -8,7 +9,7 @@ import { FilmService } from '../film.service';
 })
 
 export class PopularFilmComponent implements OnInit{
-    filmPopularList: any[] = [];
+    filmPopularList: PopularFilms[] = [];
     isLoaded: boolean;
 
     constructor(private filmService: FilmService) { }

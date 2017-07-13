@@ -3,6 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 import { FilmService } from '../film.service';
+import { FilmDetails } from '../models/filmDetails';
+import { Actors } from '../models/actors';
 
 @Component({
     selector: 'film-details',
@@ -11,8 +13,8 @@ import { FilmService } from '../film.service';
 })
 
 export class FilmDetailsComponent implements OnInit{
-    filmDetails: any[] = [];
-    actors: any[] = [];
+    filmDetails: FilmDetails;
+    actors: Actors[] = [];
 
     constructor(
         private filmService: FilmService,
