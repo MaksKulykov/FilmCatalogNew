@@ -1,0 +1,23 @@
+ul {
+    list-style: none;
+}
+span {
+    font-weight: bold;
+}
+li {
+    font-size: large;
+    margin-bottom: 20px;
+}
+.content {
+    height: 100px;
+}
+.img_actor {
+    height: 250px;
+}
+p {
+    font-weight: bold;
+    font-size: large;
+}
+.row {
+    margin-bottom: 20px;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmService } from '../film.service';
+import { PopularFilms } from '../models/popularFilms';
 
 @Component({
     selector: 'popular-film',
@@ -7,7 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PopularFilmComponent implements OnInit{
-    ngOnInit(){
+    filmPopularList: PopularFilms[] = [];
+    isLoaded: boolean;
 
+    constructor(private filmService: FilmService) { }
+
+    ngOnInit(){
+        this.isLoaded = false;
+        this.getPopularFilms();
+    }
+
+    private getPopularFilms(): void {
+        this.filmService.getPopularFilms()
+            .subscribe(
+                (films: PopularFilms[]) => {
+                    if (films && films.length) {
+                        this.filmPopularList = films;
+                    }
+                },
+                (error: any) => {
+                    console.log(error);
+                }
+            );
+        this.isLoaded = true;
     }
 }

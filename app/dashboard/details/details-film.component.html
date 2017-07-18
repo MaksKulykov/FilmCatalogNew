@@ -1,0 +1,14 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title" *ngIf="filmDetails">{{filmDetails.title}}</h4>
+                    </div>
+                    <details-film-card [filmDetails]="filmDetails" [actors]="actors"></details-film-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

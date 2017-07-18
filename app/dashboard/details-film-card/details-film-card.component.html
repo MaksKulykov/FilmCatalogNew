@@ -1,0 +1,36 @@
+<div class="card-content">
+    <div class="row" *ngIf="filmDetails">
+        <div class="col-md-3">
+            <div class="card-avatar">
+                <img class="img" src="https://image.tmdb.org/t/p/w500{{filmDetails.poster_path}}" />
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="content">
+                <ul class="info">
+                    <li><span>Release: </span>{{filmDetails.release_date}}</li>
+                    <li><span>Runtime: </span>{{filmDetails.runtime}} min</li>
+                    <li><span>Production Countries: </span>{{filmDetails.production_countries | extractElements}}</li>
+                    <li><span>Genres: </span>{{filmDetails.genres | extractElements}}</li>
+                    <li><span>Production Companies: </span>{{filmDetails.production_companies | extractElements}}</li>
+                    <li><span>Budget: </span>{{filmDetails.budget | convertBudget}} million USD</li>
+                    <li><span>Overview: </span>{{filmDetails.overview}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>Actors:</p>
+    <div class="row" *ngIf="actors">
+        <div class="col-md-2" *ngFor="let actor of actors">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <img class="img_actor" src="https://image.tmdb.org/t/p/w92{{actor.profile_path}}" />
+                </div>
+                <div class="content">
+                    <h6 class="category text-gray">{{actor.name}}</h6>
+                    <h4 class="card-title">{{actor.character}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
