@@ -9,7 +9,9 @@ import { Actors } from '../models/actors';
 @Component({
     selector: 'film-details',
     moduleId: module.id,
-    templateUrl: 'details-film.component.html'
+    templateUrl: 'details-film.component.html',
+    styleUrls: ['details-film.component.css']
+
 })
 
 export class FilmDetailsComponent implements OnInit{
