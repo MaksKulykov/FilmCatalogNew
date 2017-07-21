@@ -1,13 +1,11 @@
 <nav class="navbar navbar-transparent navbar-absolute">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group form-black is-empty">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="material-input"></span>
+                    <input mdInput type="text" placeholder="Search" name="filmName" [(ngModel)]="filmName">
                 </div>
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                <button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="goToSearchFilms()">
                     <i class="material-icons">search</i><div class="ripple-container"></div>
                 </button>
             </form>

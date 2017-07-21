@@ -8,9 +8,11 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class FilmService {
     private url: string = 'https://api.themoviedb.org/3/movie/';
+    private searchUrl: string = 'https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false';
     private apiKey: string = '0077bec633f957fbf7cd91c9c7026b27';
     private language: string = 'en-US';
     private pageNumber: string = '1';
+    private includeAdult: boolean = false;
 
     constructor(private http: Http) {
     }
@@ -55,6 +57,19 @@ export class FilmService {
         let params: URLSearchParams = new URLSearchParams();
         params.set('api_key', this.apiKey);
         return this.http.get(this.url + id + '/credits', {search: params}).map(this.extractListActors)
+            .catch((error: any) => {
+                return Observable.throw(error);
+            });
+    }
+
+    getSearchFilms(filmName: string): Observable<any> {
+        let params: URLSearchParams = new URLSearchParams();
+        params.set('api_key', this.apiKey);
+        params.set('language', this.language);
+        params.set('page', this.pageNumber);
+        params.set('include_adult', this.includeAdult.toString());
+        params.set('query', filmName);
+        return this.http.get(this.searchUrl, {search: params}).map(this.extractListData)
             .catch((error: any) => {
                 return Observable.throw(error);
             });

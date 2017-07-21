@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class FormatString implements PipeTransform {
     transform(value: string): string {
-        if (value.length > 250) {
-            return value.slice(0,250) + '...';
+        if (value.length > 200) {
+            return value.slice(0,200) + '...';
         } else {
             return value;
         }
