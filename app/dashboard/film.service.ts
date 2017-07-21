@@ -8,7 +8,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class FilmService {
     private url: string = 'https://api.themoviedb.org/3/movie/';
-    private searchUrl: string = 'https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false';
+    private searchUrl: string = 'https://api.themoviedb.org/3/search/movie';
     private apiKey: string = '0077bec633f957fbf7cd91c9c7026b27';
     private language: string = 'en-US';
     private pageNumber: string = '1';
